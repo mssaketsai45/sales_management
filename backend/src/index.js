@@ -10,10 +10,26 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*',
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'OK', 
+    message: 'Sales Management API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      sales: '/api/sales',
+      filterOptions: '/api/sales/filter-options'
+    }
+  });
+});
+
 app.use('/api/sales', salesRoutes);
 
 // Health check
