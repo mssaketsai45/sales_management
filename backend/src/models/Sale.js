@@ -42,6 +42,10 @@ const salesSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  discountPercentage: {
+    type: Number,
+    default: 0
+  },
   customerRegion: {
     type: String,
     required: true

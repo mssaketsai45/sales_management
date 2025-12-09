@@ -39,6 +39,7 @@ const importCSVData = async () => {
             productCategory: row['Product Category'] || row.productCategory,
             quantity: parseInt(row['Quantity'] || row.quantity),
             totalAmount: parseFloat(row['Total Amount'] || row.totalAmount),
+            discountPercentage: parseFloat(row['Discount Percentage'] || row.discountPercentage || 0),
             customerRegion: row['Customer Region'] || row.customerRegion,
             productId: row['Product ID'] || row.productId,
             employeeName: row['Employee Name'] || row.employeeName,

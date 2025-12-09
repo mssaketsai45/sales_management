@@ -93,9 +93,6 @@ After deployment, go to your Vercel dashboard:
 #### 2.5 Get Backend URL
 Your backend URL will be: `https://sales-management-backend.vercel.app`
 **Save this URL!** You'll need it for frontend deployment.
-
----
-
 ### Option B: Deploy to Render
 
 #### 2.1 Create Web Service
@@ -122,7 +119,6 @@ Click **"Create Web Service"** (takes 2-3 minutes)
 
 Your backend URL will be: `https://sales-management-backend.onrender.com`
 
----
 
 ## 🎨 Step 3: Deploy Frontend
 

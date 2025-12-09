@@ -124,6 +124,11 @@ function App() {
   // Calculate summary statistics
   const totalUnits = (sales || []).reduce((sum, sale) => sum + (sale.quantity || 0), 0);
   const totalAmount = (sales || []).reduce((sum, sale) => sum + (sale.totalAmount || sale.finalAmount || 0), 0);
+  const totalDiscount = (sales || []).reduce((sum, sale) => {
+    const amount = sale.totalAmount || sale.finalAmount || 0;
+    const discount = sale.discountPercentage || 0;
+    return sum + (amount * discount / 100);
+  }, 0);
 
   return (
     <div className="app">
@@ -146,6 +151,7 @@ function App() {
           <SummaryCards
             totalUnits={totalUnits}
             totalAmount={totalAmount}
+            totalDiscount={totalDiscount}
           />
 
           <div className="table-container">

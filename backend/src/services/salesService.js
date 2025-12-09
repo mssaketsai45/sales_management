@@ -154,13 +154,14 @@ class SalesService {
             _id: null,
             totalUnits: { $sum: '$quantity' },
             totalAmount: { $sum: '$totalAmount' },
+            totalDiscount: { $sum: { $multiply: ['$totalAmount', { $divide: ['$discountPercentage', 100] }] } },
             totalRecords: { $sum: 1 }
           }
         }
       ]);
 
       if (stats.length === 0) {
-        return { totalUnits: 0, totalAmount: 0, totalRecords: 0 };
+        return { totalUnits: 0, totalAmount: 0, totalDiscount: 0, totalRecords: 0 };
       }
 
       return stats[0];
