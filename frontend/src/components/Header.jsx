@@ -138,7 +138,6 @@ const Header = ({ searchTerm, onSearchChange, filters, filterOptions, onFilterCh
               <option value="totalAmount-desc">Amount (High to Low)</option>
               <option value="totalAmount-asc">Amount (Low to High)</option>
             </select>
-            <span className="dropdown-arrow">▾</span>
           </div>
         </div>
       </div>
