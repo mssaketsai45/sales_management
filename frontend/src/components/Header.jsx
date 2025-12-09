@@ -23,12 +23,30 @@ const Header = ({ searchTerm, onSearchChange, filters, filterOptions, onFilterCh
   };
 
   const applyAgeRange = () => {
+    const min = parseInt(ageMin) || 0;
+    const max = parseInt(ageMax) || 120;
+    
+    if (ageMin && ageMax && min > max) {
+      alert('Minimum age cannot be greater than maximum age');
+      return;
+    }
+    
+    if (min < 0 || max < 0 || min > 120 || max > 120) {
+      alert('Age must be between 0 and 120');
+      return;
+    }
+    
     onFilterChange('ageMin', ageMin);
     onFilterChange('ageMax', ageMax);
     setShowAgeModal(false);
   };
 
   const applyDateRange = () => {
+    if (dateFrom && dateTo && new Date(dateFrom) > new Date(dateTo)) {
+      alert('From date cannot be after To date');
+      return;
+    }
+    
     onFilterChange('dateFrom', dateFrom);
     onFilterChange('dateTo', dateTo);
     setShowDateModal(false);
