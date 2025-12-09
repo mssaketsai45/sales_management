@@ -397,7 +397,7 @@ body {
 }
 
 .filter-select {
-  padding: 10px 40px 10px 14px;
+  padding: 10px 50px 10px 14px;
   border: 1.5px solid #E0E0E0;
   border-radius: 8px;
   font-size: 14px;
@@ -414,8 +414,9 @@ body {
   display: inline-block !important;
   visibility: visible !important;
   text-align: left;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .filter-select:hover {
@@ -446,8 +447,8 @@ body {
   background-image: linear-gradient(135deg, #FFFFFF 0%, #F8F8F8 100%), 
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23555" d="M6 9L1 4h10z"/></svg>');
   background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, calc(100% - 12px) center;
-  padding-right: 34px;
+  background-position: 0 0, calc(100% - 16px) center;
+  padding-right: 44px;
 }
 
 .sort-select:hover {
@@ -460,15 +461,16 @@ body {
 
 .dropdown-arrow {
   position: absolute;
-  right: 14px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  font-size: 12px;
+  font-size: 11px;
   color: #555;
   font-weight: 700;
   transition: all 0.2s ease;
   line-height: 1;
+  z-index: 1;
 }
 
 .filter-select:hover .dropdown-arrow {
