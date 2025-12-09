@@ -77,7 +77,7 @@ vercel
 - **Which directory?** → `./` (current)
 - **Override settings?** → No
 
-#### 2.4 Add Environment Variables
+#### 2.4 Add Environment Variables 
 After deployment, go to your Vercel dashboard:
 1. Select your backend project
 2. Go to **Settings** → **Environment Variables**
