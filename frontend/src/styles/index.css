@@ -947,9 +947,8 @@ body {
     margin-left: auto;
   }
   
-  .sales-table th:nth-child(n+7),
-  .sales-table td:nth-child(n+7) {
-    display: none;
+  .sales-table {
+    min-width: 1200px;
   }
 }
 
@@ -1057,19 +1056,24 @@ body {
   }
   
   .summary-cards {
-    gap: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   
   .summary-card {
-    padding: 12px;
+    padding: 8px 10px;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    max-width: none;
   }
   
   .summary-value {
-    font-size: 20px;
+    font-size: 18px;
   }
   
-  .summary-label {
-    font-size: 12px;
+  .summary-label,
+  .card-label {
+    font-size: 11px;
   }
   
   .table-container {
@@ -1078,13 +1082,8 @@ body {
   }
   
   .sales-table {
-    min-width: 600px;
+    min-width: 1200px;
     font-size: 11px;
-  }
-  
-  .sales-table th:nth-child(n+5),
-  .sales-table td:nth-child(n+5) {
-    display: none;
   }
   
   .pagination {
@@ -1136,15 +1135,19 @@ body {
   }
   
   .summary-card {
-    padding: 10px 12px;
+    padding: 6px 8px;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    max-width: none;
   }
   
-  .card-value {
-    font-size: 20px;
+  .card-value,
+  .summary-value {
+    font-size: 16px;
   }
   
   .card-label {
-    font-size: 12px;
+    font-size: 10px;
   }
   
   .sales-table {
@@ -1156,9 +1159,8 @@ body {
     padding: 8px 6px;
   }
   
-  .sales-table th:nth-child(n+4),
-  .sales-table td:nth-child(n+4) {
-    display: none;
+  .sales-table {
+    min-width: 1200px;
   }
   
   .pagination-button {
@@ -1204,12 +1206,7 @@ body {
   }
   
   .sales-table {
-    min-width: 400px;
-  }
-  
-  .sales-table th:nth-child(n+3),
-  .sales-table td:nth-child(n+3) {
-    display: none;
+    min-width: 1200px;
   }
 }
 
