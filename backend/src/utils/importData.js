@@ -10,8 +10,9 @@ const importCSVData = async () => {
     // Check if data already exists
     const count = await Sale.countDocuments();
     if (count > 0) {
-      console.log(`Database already has ${count} records. Skipping import.`);
-      return;
+      console.log(`Database has ${count} records. Deleting existing data...`);
+      await Sale.deleteMany({});
+      console.log('Existing data deleted. Starting fresh import...');
     }
 
     console.log('Database is empty. Starting CSV import...');
